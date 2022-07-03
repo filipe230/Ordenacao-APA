@@ -11,9 +11,8 @@ $(document).ready(function () {
             return a - b;
         });*/
         json.sort(function (a, b) {
-            return a.nome < b.nome ? -1 :
-            (a.nome > b.nome ? 1 : 0);
-            });
+            return a.nome < b.nome ? -1 : (a.nome > b.nome ? 1 : 0);
+        });
 
         var fim = new Date().getTime();
         var tempo = fim - inicio;

@@ -52,27 +52,23 @@ $(document).ready(function () {
         return quicksort(left).concat(pivo, quicksort(right));
       };*/
       
-function qs(vet)
-{
+function qs(vet){
     quickSort(vet, 0, vet.length - 1);
 }
 
-function quickSort(vet, ini, fim)
-{
+function quickSort(vet, ini, fim){
     var i = ini;
     var f = fim;
     var m = Math.floor((i + f)/2);
 
-    while(i < f)
-    {
+    while(i < f){
         while(vet[i].nome < vet[m].nome)
             i++;
 
         while(vet[f].nome > vet[m].nome)
             f--;
 
-        if(i <= f)
-        {
+        if(i <= f){
             var temp = vet[i].nome;
             vet[i].nome = vet[f].nome;
             vet[f].nome = temp;
