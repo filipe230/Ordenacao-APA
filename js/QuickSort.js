@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         var inicio = new Date().getTime();
 
-        quicksort(json);
+        qs(json);
 
         var fim = new Date().getTime();
         var tempo = fim - inicio;
@@ -35,7 +35,7 @@ $(document).ready(function () {
         $('#table').append(student);
     }
 
-    function quicksort(arrayQuick) {
+    /*function quicksort(arrayQuick) {
         if (arrayQuick.length <= 1) {
           return arrayQuick;
         }
@@ -50,7 +50,43 @@ $(document).ready(function () {
         }
       
         return quicksort(left).concat(pivo, quicksort(right));
-      };
+      };*/
+      
+function qs(vet)
+{
+    quickSort(vet, 0, vet.length - 1);
+}
+
+function quickSort(vet, ini, fim)
+{
+    var i = ini;
+    var f = fim;
+    var m = Math.floor((i + f)/2);
+
+    while(i < f)
+    {
+        while(vet[i].nome < vet[m].nome)
+            i++;
+
+        while(vet[f].nome > vet[m].nome)
+            f--;
+
+        if(i <= f)
+        {
+            var temp = vet[i].nome;
+            vet[i].nome = vet[f].nome;
+            vet[f].nome = temp;
+            i++;
+            f--;
+        }
+    }
+
+    if(f > ini)
+        quickSort(vet, ini, f);
+
+    if(i < fim)
+        quickSort(vet, i, fim);
+}
     
 });
 
