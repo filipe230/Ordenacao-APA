@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilização do site (inicio)*/
+
+html,body{
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #adcefd;
+}
+
+img{
+    width: 100%;
+}
+
+.center{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+/*Estilização do site (fim)*/
+
+
